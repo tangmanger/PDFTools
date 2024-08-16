@@ -2,3 +2,11 @@
 	path = Dicgo.Common
 	url = git@github.com:tangmanger/Dicgo.Common.git
 	branch = main
+[submodule "Dicgo.Controls"]
+	path = Dicgo.Controls
+	url = git@github.com:tangmanger/Dicgo.Controls.git
+	branch = main
+[submodule "Dicgo.Domain"]
+	path = Dicgo.Domain
+	url = git@github.com:tangmanger/Dicgo.Domain.git
+	branch = main
