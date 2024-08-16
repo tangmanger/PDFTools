@@ -1,0 +1,4 @@
+[submodule "Dicgo.Common"]
+	path = Dicgo.Common
+	url = git@github.com:tangmanger/Dicgo.Common.git
+	branch = main
