@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--主界面-->
+    <Color x:Key="mainBackgroundColor" >#F5F6FA</Color>
+    <!--工作区-->
+    <Color x:Key="mainWorkAreaColor">white</Color>
+    <SolidColorBrush x:Key="navigateButtonBackgroud" Color="#e3e9ff"></SolidColorBrush>
+    <SolidColorBrush x:Key="navigateButtonForeground" Color="Black"></SolidColorBrush>
+    <SolidColorBrush x:Key="navigateButtonCheckForeground" Color="#FF478DE2"></SolidColorBrush>
+    <SolidColorBrush x:Key="navigateButtonIconForeground" Color="Black"></SolidColorBrush>
+</ResourceDictionary>

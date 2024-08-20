@@ -1,11 +1,12 @@
-﻿<Window x:Class="PdfMaestro.MainWindow"
+﻿<Window x:Class="Master.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PdfMaestro"
+        xmlns:local="clr-namespace:Master"
         mc:Ignorable="d"
-        Title="PdfMaestro"  Height="750" Width="1080" WindowStyle="None" WindowStartupLocation="CenterScreen" >
+        xmlns:tcontrols="https://dicgo.com/controls/radioButtons"
+        Title="Master"  Height="750" Width="1080" WindowStyle="None" WindowStartupLocation="CenterScreen" DataContext="{Binding Main,Source={StaticResource Locator}}">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="30"
                   GlassFrameThickness="1"
@@ -21,6 +22,20 @@
             <ColumnDefinition Width="200"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <!--<StackPanel>
+        </StackPanel>-->
+        <ItemsControl Margin="0,50,0,0" ItemsSource="{Binding Tools}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel></StackPanel>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <tcontrols:IconRadioButton Icon="{Binding Icon}" IsChecked="{Binding IsSelected}" GroupName="tools" Style="{StaticResource  NavigateButtonStyle}" IconForeground="{DynamicResource navigateButtonIconForeground}" Foreground="{DynamicResource navigateButtonForeground}" IconSize="28" Margin="5,8,5,8" Height="45" d:Content="Pdf转图片" Content="{Binding ToolName}"></tcontrols:IconRadioButton>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
         <Grid Grid.Column="1" Background="{DynamicResource mainWorkAreaBrush}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
@@ -32,6 +47,7 @@
                 <Button Style="{StaticResource IconButtonStyle}" FontSize="16" Margin="10,0,10,0"  Command="{x:Static SystemCommands.RestoreWindowCommand}" x:Name="normal" Content="&#xe692;"></Button>
                 <Button Style="{StaticResource IconButtonStyle}" FontSize="16"  Command="{x:Static SystemCommands.CloseWindowCommand}" Content="&#xe607;"></Button>
             </StackPanel>
+            <ContentControl Grid.Row="1" Content="{Binding WorkView}"></ContentControl>
         </Grid>
     </Grid>
 </Window>

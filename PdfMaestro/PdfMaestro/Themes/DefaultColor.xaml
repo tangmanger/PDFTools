@@ -1,7 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <!--主界面-->
-    <Color x:Key="mainBackgroundColor" >#F5F6FA</Color>
-    <!--工作区-->
-    <Color x:Key="mainWorkAreaColor">white</Color>
-</ResourceDictionary>

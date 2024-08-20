@@ -8,12 +8,14 @@
     <UseWPF>true</UseWPF>
     <Platforms>AnyCPU;x64</Platforms>
     <UseWindowsForms>True</UseWindowsForms>
+    <StartupObject>Master.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Dicgo.Common\Dicgo.Common\Dicgo.Common.csproj" />
     <ProjectReference Include="..\..\Dicgo.Controls\Dicgo.Controls\Dicgo.Controls\Dicgo.Controls.csproj" />
     <ProjectReference Include="..\..\Dicgo.Domain\Dicgo.Domain\Dicgo.Domain.csproj" />
+    <ProjectReference Include="..\Dicgo.Pdf\Dicgo.Pdf.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +31,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
   </ItemGroup>
 
 </Project>

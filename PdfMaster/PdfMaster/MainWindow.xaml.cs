@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using CommunityToolkit.Mvvm.DependencyInjection;
+using Master.ViewModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,7 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PdfMaestro
+namespace Master
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -26,6 +28,19 @@ namespace PdfMaestro
             this.StateChanged += MainWindow_StateChanged;
             max.Visibility = Visibility.Visible;
             normal.Visibility = Visibility.Collapsed;
+            this.Loaded += MainWindow_Loaded;
+
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            var vm = Ioc.Default.GetService<MainViewModel>();
+            if (vm != null)
+            {
+        
+                    vm.Init();
+             
+            }
         }
 
         private void MainWindow_StateChanged(object? sender, EventArgs e)
