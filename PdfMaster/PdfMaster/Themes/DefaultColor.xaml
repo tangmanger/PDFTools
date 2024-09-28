@@ -8,4 +8,7 @@
     <SolidColorBrush x:Key="navigateButtonForeground" Color="Black"></SolidColorBrush>
     <SolidColorBrush x:Key="navigateButtonCheckForeground" Color="#FF478DE2"></SolidColorBrush>
     <SolidColorBrush x:Key="navigateButtonIconForeground" Color="Black"></SolidColorBrush>
+    <!--按钮-->
+    <SolidColorBrush x:Key="commonButtonBackground" Color="White"></SolidColorBrush>
+    <SolidColorBrush x:Key="commonButtonBorderBrush" Color="LightGray"></SolidColorBrush>
 </ResourceDictionary>

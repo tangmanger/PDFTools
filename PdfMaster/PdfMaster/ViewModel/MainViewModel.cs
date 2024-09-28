@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Dicgo.Common.Helpers;
 using Dicgo.Domain.Models;
 using Master.Models;
@@ -71,6 +72,24 @@ namespace Master.ViewModel
             }
 
         }
+
+        #endregion
+
+
+        #region 命令
+
+        /// <summary>
+        /// 导入
+        /// </summary>
+        public RelayCommand ImportFilesCommand => new RelayCommand(() => { });
+
+        /// <summary>
+        /// 退出
+        /// </summary>
+        public RelayCommand ExitCommand => new RelayCommand(() =>
+        {
+            Environment.Exit(0);
+        });
 
         #endregion
     }

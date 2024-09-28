@@ -15,7 +15,10 @@
                 <ResourceDictionary Source="/Styles/BrushesStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/Styles/TextBlockStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="/Styles/RadioButtonStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="/Styles/ButtonStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/Dicgo.Controls;component/Styles/ButtonStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/Dicgo.Controls;component/Styles/DataGridStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/Dicgo.Controls;component/Styles/MenuStyle.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
