@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Master"
         mc:Ignorable="d"
         xmlns:tcontrols="https://dicgo.com/controls/radioButtons"
-        Title="Master"  Height="750" Width="1080" WindowStyle="None" WindowStartupLocation="CenterScreen" DataContext="{Binding Main,Source={StaticResource Locator}}">
+        Title="Master"  Height="720" Width="1080" WindowStyle="None" WindowStartupLocation="CenterScreen" DataContext="{Binding Main,Source={StaticResource Locator}}">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="30"
                   GlassFrameThickness="1"
@@ -34,7 +34,7 @@
                 <Button Style="{StaticResource IconButtonStyle}" FontSize="16" Margin="10,0,10,0"  Command="{x:Static SystemCommands.RestoreWindowCommand}" x:Name="normal" Content="&#xe692;"></Button>
                 <Button Style="{StaticResource IconButtonStyle}" FontSize="16"  Command="{x:Static SystemCommands.CloseWindowCommand}" Content="&#xe607;"></Button>
             </StackPanel>
-            <Menu Margin="5,0,0,0" HorizontalAlignment="Left" Background="Transparent" WindowChrome.IsHitTestVisibleInChrome="True"  VerticalAlignment="Center">
+            <Menu Margin="15,0,0,0" HorizontalAlignment="Left" Background="Transparent" WindowChrome.IsHitTestVisibleInChrome="True"  VerticalAlignment="Center">
                 <MenuItem   MinWidth="50" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="14" HorizontalContentAlignment="Center" d:Header="文件" Header="{DynamicResource file}">
                     <MenuItem d:Header="导入文件"   Header="{DynamicResource importFile}" FontSize="14"  Command="{Binding ImportFilesCommand}"  >
                         <MenuItem.Icon>

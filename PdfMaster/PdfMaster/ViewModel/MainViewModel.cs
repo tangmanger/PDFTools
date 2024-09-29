@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Dicgo.Common.Helpers;
+using Dicgo.Domain.Interfaces;
 using Dicgo.Domain.Models;
 using Master.Models;
 using System;
@@ -81,7 +82,28 @@ namespace Master.ViewModel
         /// <summary>
         /// 导入
         /// </summary>
-        public RelayCommand ImportFilesCommand => new RelayCommand(() => { });
+        public RelayCommand ImportFilesCommand => new RelayCommand(() =>
+        {
+            Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
+            openFileDialog.DefaultExt = ".pdf"; // Default file extension
+            openFileDialog.Filter = "pdf documents|*.pdf"; // Filter files by extension
+            openFileDialog.Multiselect = true;
+            var result = openFileDialog.ShowDialog();
+            ///用户点了关闭按钮,未选择路径
+            if (result != true)
+            {
+                return;
+            }
+            var files = openFileDialog.FileNames;
+            if (files != null && WorkView.DataContext != null)
+            {
+                IOpen open = WorkView.DataContext as IOpen;
+                if (open != null)
+                {
+                    open.OpenFile(files);
+                }
+            }
+        });
 
         /// <summary>
         /// 退出
